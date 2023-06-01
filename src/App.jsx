@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import SearchBar from "./components/SearchBar";
+import SearchResultsList from "./components/SearchResultsList";
 
 function App() {
   const [results, setResults] = useState([]);
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
       <div className="search-bar-container">
         <SearchBar setResults={setResults} />
-        <div>Search Results</div>
+        <SearchResultsList results={results} />
       </div>
     </div>
   );
